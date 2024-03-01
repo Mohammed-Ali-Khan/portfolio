@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Reset default margin and padding */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+        /* Set background color to white */
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        /* Header styles */
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        /* Logo styles */
+        #logo {
+            cursor: pointer;
+        }
+        /* Navigation styles */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+        nav a {
+            display: inline-block;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border: 1px solid #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: mediumseagreen;
+            color: #ffffff;
+        }
+        /* Section styles */
+        .section {
+            display: none;
+            padding: 20px;
+        }
+        .visible {
+            display: block;
+        }
+        /* Customize styles for each section */
+        #portfolio {
+            background-color: #f9f9f9;
+        }
+        #about {
+            background-color: #e6f7ff;
+        }
+        #contact {
+            background-color: #f0e68c;
+        }
+        /* Active button styles */
+        .active {
+            background-color: mediumseagreen;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <img id="logo" src="logo.png" alt="Logo" onclick="showAbout()">
+    </header>
+    <nav>
+        <a href="#portfolio" onclick="showPortfolio()">Portfolio/Work</a>
+        <a href="#about" onclick="showAbout()" class="active">About</a>
+        <a href="#contact" onclick="showContact()">Contact</a>
+    </nav>
+    <div id="portfolio" class="section">
+        <!-- Your portfolio/work content goes here -->
+        <h2>Portfolio/Work</h2>
+        <p>Check out my latest projects!</p>
+    </div>
+    <div id="about" class="section visible">
+        <!-- Your about content goes here -->
+        <h2>About Me</h2>
+        <p>I am a passionate web developer...</p>
+    </div>
+    <div id="contact" class="section">
+        <!-- Your contact content goes here -->
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me:</p>
+        <ul>
+            <li>Email: <a href="mailto:your@email.com">your@email.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">LinkedIn Profile</a></li>
+        </ul>
+    </div>
+    <script>
+        // Toggle visibility of sections when clicking on navigation links
+        function showPortfolio() {
+            hideAllSections();
+            document.getElementById('portfolio').classList.add('visible');
+            setActiveButton('portfolio');
+        }
+        function showAbout() {
+            hideAllSections();
+            document.getElementById('about').classList.add('visible');
+            setActiveButton('about');
+        }
+        function showContact() {
+            hideAllSections();
+            document.getElementById('contact').classList.add('visible');
+            setActiveButton('contact');
+        }
+        function hideAllSections() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('visible'));
+        }
+        function setActiveButton(buttonId) {
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === `#${buttonId}`) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
