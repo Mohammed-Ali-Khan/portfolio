@@ -4,81 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Ali Khan</title>
-    <style>
-        /* Reset default margin and padding */
-        body, h1, p {
-            margin: 0;
-            padding: 1;
-        }
-        /* Set background color to white */
-        body {
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
-        /* Header styles */
-        header {
-            display: flex;
-            align-items:center; /* Vertically center the logo and heading */
-            padding: 10px; /* Add some padding for spacing */
-            background-color: #f0f0f0; /* Optional: Set a background color for the header */
-
-        }
-        h1 {
-            font-size: 24px;
-            margin: 0;
-            text-align: center;
-            flex-grow: 0.92; /* Allow the heading to take up remaining space */
-        }
-        /* Logo styles */
-        #logo {
-            cursor: pointer;
-            text-align:left;
-            height: auto;
-            width: 80px;
-        }
-        /* Navigation styles */
-        nav {
-            text-align: center;
-            margin-top: 20px;
-        }
-        nav a {
-            display: inline-block;
-            margin-right: 20px;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            border: 1px solid #333;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        nav a:hover {
-            background-color: mediumseagreen;
-            color: #ffffff;
-        }
-        /* Section styles */
-        .section {
-            display: none;
-            padding: 20px;
-        }
-        .visible {
-            display: block;
-        }
-        /* Customize styles for each section */
-        #portfolio {
-            background-color: #f9f9f9;
-        }
-        #about {
-            background-color: #f9f9f9;
-        }
-        #contact {
-            background-color: #f9f9f9;
-        }
-        /* Active button styles */
-        .active {
-            background-color: mediumseagreen;
-            color: #ffffff;
-        }
-    </style>
+    <style ></style>
 </head>
 <body>
     <header>
@@ -111,37 +37,6 @@
             <li>LinkedIn: <a href="linkedin.com/in/yes-mohammed-ali-khan">LinkedIn Profile</a></li>
         </ul>
     </div>
-    <script>
-        // Toggle visibility of sections when clicking on navigation links
-        function showPortfolio() {
-            hideAllSections();
-            document.getElementById('portfolio').classList.add('visible');
-            setActiveButton('portfolio');
-        }
-        function showAbout() {
-            hideAllSections();
-            document.getElementById('about').classList.add('visible');
-            setActiveButton('about');
-        }
-        function showContact() {
-            hideAllSections();
-            document.getElementById('contact').classList.add('visible');
-            setActiveButton('contact');
-        }
-        function hideAllSections() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => section.classList.remove('visible'));
-        }
-        function setActiveButton(buttonId) {
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === `#${buttonId}`) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>

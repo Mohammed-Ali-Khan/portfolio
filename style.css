@@ -1,0 +1,92 @@
+        /* Reset default margin and padding */
+        body,
+        h1,
+        p {
+            margin: 0;
+            padding: 1;
+        }
+
+        /* Set background color to white */
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header styles */
+        header {
+            display: flex;
+            align-items: center;
+            /* Vertically center the logo and heading */
+            padding: 10px;
+            /* Add some padding for spacing */
+            background-color: #f0f0f0;
+            /* Optional: Set a background color for the header */
+
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+            text-align: center;
+            flex-grow: 0.92;
+            /* Allow the heading to take up remaining space */
+        }
+
+        /* Logo styles */
+        #logo {
+            cursor: pointer;
+            text-align: left;
+            height: auto;
+            width: 80px;
+        }
+
+        /* Navigation styles */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            display: inline-block;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            border: 1px solid #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: mediumseagreen;
+            color: #ffffff;
+        }
+
+        /* Section styles */
+        .section {
+            display: none;
+            padding: 20px;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        /* Customize styles for each section */
+        #portfolio {
+            background-color: #f9f9f9;
+        }
+
+        #about {
+            background-color: #f9f9f9;
+        }
+
+        #contact {
+            background-color: #f9f9f9;
+        }
+
+        /* Active button styles */
+        .active {
+            background-color: mediumseagreen;
+            color: #ffffff;
+        }
