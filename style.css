@@ -49,6 +49,7 @@ nav {
     position: sticky;
     top: 60px;
     background-color: #ffffff;
+    height: 40px;
 }
 
 nav a {
@@ -71,6 +72,7 @@ nav a:hover {
 .section {
     display: none;
     padding: 20px;
+    top: 70px;
 }
 
 .visible {
