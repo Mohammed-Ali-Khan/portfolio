@@ -86,6 +86,7 @@ nav a:hover {
 
 #about {
     background-color: #ffffff;
+   
 }
 
 #contact {
@@ -96,4 +97,27 @@ nav a:hover {
 .active {
     background-color: mediumseagreen;
     color: #ffffff;
+}
+
+#about-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.about-content {
+    flex:auto;
+    text-align: left;
+    height: auto;
+}
+
+.image-container {
+    flex: auto;
+    text-align: right;
+    max-width: 240px;
+    height: 183px;
+}
+
+.image-container img {
+    max-width: 240px;
+    height: 180.5px;
 }
